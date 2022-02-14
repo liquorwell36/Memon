@@ -9,19 +9,22 @@ import Foundation
 import UIKit
 
 class SearchViewController: UIViewController, UISearchBarDelegate {
+    var books: Books = Books(totalItems: 0, items: [])
     
     var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBar()
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     private func setupSearchBar() {
         if let navigationBarFrame = navigationController?.navigationBar.bounds {
             let searchBar: UISearchBar = UISearchBar(frame: navigationBarFrame)
             searchBar.delegate = self
-            //searchBar.showsCancelButton = true
             searchBar.placeholder = "検索キーワードを入力してください。"
             searchBar.autocapitalizationType = UITextAutocapitalizationType.none
             searchBar.keyboardType = UIKeyboardType.default
@@ -33,18 +36,26 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         }
     }
     
+    
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("\(searchBar.text)")
+        APIService().fetchBooksData(searchBar.text!) { books in
+            self.books = books
+            DispatchQueue.main.sync {
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.books.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
+        cell.textLabel?.text = self.books.items[indexPath.row]?.volumeInfo.title
         return cell
     }
 }

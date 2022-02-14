@@ -15,6 +15,8 @@
 		2187D87427B1D97A003EC98D /* tabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2187D87327B1D97A003EC98D /* tabViewController.swift */; };
 		2187D87627B1D9A7003EC98D /* BookMarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2187D87527B1D9A7003EC98D /* BookMarkViewController.swift */; };
 		2187D87827B1D9B9003EC98D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2187D87727B1D9B9003EC98D /* SearchViewController.swift */; };
+		2187D87B27B3ED5A003EC98D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2187D87A27B3ED5A003EC98D /* APIService.swift */; };
+		2187D87E27B43E9A003EC98D /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2187D87D27B43E9A003EC98D /* Books.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		2187D87327B1D97A003EC98D /* tabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabViewController.swift; sourceTree = "<group>"; };
 		2187D87527B1D9A7003EC98D /* BookMarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkViewController.swift; sourceTree = "<group>"; };
 		2187D87727B1D9B9003EC98D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2187D87A27B3ED5A003EC98D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		2187D87D27B43E9A003EC98D /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 		2187D85D27B1D23F003EC98D /* Memon */ = {
 			isa = PBXGroup;
 			children = (
+				2187D87C27B43E01003EC98D /* Models */,
+				2187D87927B3ED47003EC98D /* Services */,
 				2187D87227B1D963003EC98D /* Controllers */,
 				2187D85E27B1D23F003EC98D /* AppDelegate.swift */,
 				2187D86027B1D23F003EC98D /* SceneDelegate.swift */,
@@ -79,6 +85,22 @@
 				2187D87727B1D9B9003EC98D /* SearchViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2187D87927B3ED47003EC98D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2187D87A27B3ED5A003EC98D /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2187D87C27B43E01003EC98D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2187D87D27B43E9A003EC98D /* Books.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +177,9 @@
 				2187D87827B1D9B9003EC98D /* SearchViewController.swift in Sources */,
 				2187D87627B1D9A7003EC98D /* BookMarkViewController.swift in Sources */,
 				2187D85F27B1D23F003EC98D /* AppDelegate.swift in Sources */,
+				2187D87E27B43E9A003EC98D /* Books.swift in Sources */,
 				2187D87427B1D97A003EC98D /* tabViewController.swift in Sources */,
+				2187D87B27B3ED5A003EC98D /* APIService.swift in Sources */,
 				2187D86127B1D23F003EC98D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,7 +331,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L4GDD2P9QK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UITabBarSample/Info.plist;
+				INFOPLIST_FILE = Memon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -335,7 +359,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L4GDD2P9QK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UITabBarSample/Info.plist;
+				INFOPLIST_FILE = Memon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

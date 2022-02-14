@@ -11,7 +11,7 @@
         <!--Search View Controller-->
         <scene sceneID="7HX-kS-bo1">
             <objects>
-                <viewController id="pac-4h-ZmT" customClass="SearchViewController" customModule="UITabBarSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pac-4h-ZmT" customClass="SearchViewController" customModule="Memon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ouZ-Xl-oMZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,11 +20,11 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" id="31P-KL-Si9">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" rowHeight="90" id="31P-KL-Si9">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="31P-KL-Si9" id="b1v-BI-FfB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -41,6 +41,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ms8-uO-bhh"/>
+                    <connections>
+                        <outlet property="tableView" destination="7q9-Fa-gJV" id="Ndc-w2-tf0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFf-Rc-1UH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,7 +52,7 @@
         <!--お気に入り-->
         <scene sceneID="cNK-Vj-ky3">
             <objects>
-                <viewController id="CAU-pb-53c" customClass="BookMarkViewController" customModule="UITabBarSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CAU-pb-53c" customClass="BookMarkViewController" customModule="Memon" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="お気に入り" id="bLS-ve-qcl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NvA-yb-amC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -59,7 +62,7 @@
         <!--Tab View Controller-->
         <scene sceneID="Fc6-uI-o5X">
             <objects>
-                <tabBarController id="DIa-PY-Bsm" customClass="tabViewController" customModule="UITabBarSample" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="DIa-PY-Bsm" customClass="tabViewController" customModule="Memon" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fnO-SH-8us">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

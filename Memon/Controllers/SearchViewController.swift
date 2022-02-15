@@ -58,4 +58,15 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = self.books.items[indexPath.row]?.volumeInfo.title
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetailSegue", sender: self.books.items[indexPath.row]?.volumeInfo)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailSegue" {
+            let bookDetailViewController = segue.destination as! BookDetailViewController
+            bookDetailViewController.parameters = sender as! BookInfo
+        }
+    }
 }

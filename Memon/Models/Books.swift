@@ -20,12 +20,12 @@ struct Book: Decodable {
 struct BookInfo: Decodable {
     var title: String
     var authors: [String]
-    var publisher: String
+    var publisher: String?
     var description: String
-    var imageLinks: Thumbnail
+    var imageLinks: Thumbnail?
 }
 
 struct Thumbnail: Decodable {
-    var smallThumbnail: URL
-    var thumbnail: URL
+    var smallThumbnail: URL?
+    var thumbnail: URL?
 }

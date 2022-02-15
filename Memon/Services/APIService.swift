@@ -17,6 +17,10 @@ struct APIService {
         var urlComponents = URLComponents(string: baseURL)
         urlComponents?.query = "q=\(searchText)"
         let url = urlComponents?.url
+        print(url)
+        let encodeUrlString = url?.absoluteString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let encodedUrl = URL(string: encodeUrlString!)
+        print(encodedUrl)
         
         let task = session.dataTask(with: url!) { data, response, error in
             if let error = error {
@@ -32,7 +36,7 @@ struct APIService {
             if response.statusCode == 200 {
                 do {
                     let decoder = JSONDecoder()
-                    let results = try decoder.decode(Books.self, from: data)
+                    let results = try! decoder.decode(Books.self, from: data)
                     completion(results)
                 } catch {
                     print("デコードエラー")

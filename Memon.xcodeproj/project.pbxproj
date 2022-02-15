@@ -17,6 +17,8 @@
 		2187D87827B1D9B9003EC98D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2187D87727B1D9B9003EC98D /* SearchViewController.swift */; };
 		2187D87B27B3ED5A003EC98D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2187D87A27B3ED5A003EC98D /* APIService.swift */; };
 		2187D87E27B43E9A003EC98D /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2187D87D27B43E9A003EC98D /* Books.swift */; };
+		21D60B8E27BA842E008018A2 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D60B8D27BA842E008018A2 /* BookDetailViewController.swift */; };
+		21D60B9027BBDACD008018A2 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D60B8F27BBDACD008018A2 /* TweetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		2187D87727B1D9B9003EC98D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2187D87A27B3ED5A003EC98D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		2187D87D27B43E9A003EC98D /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		21D60B8D27BA842E008018A2 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		21D60B8F27BBDACD008018A2 /* TweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				2187D87327B1D97A003EC98D /* tabViewController.swift */,
 				2187D87527B1D9A7003EC98D /* BookMarkViewController.swift */,
 				2187D87727B1D9B9003EC98D /* SearchViewController.swift */,
+				21D60B8D27BA842E008018A2 /* BookDetailViewController.swift */,
+				21D60B8F27BBDACD008018A2 /* TweetViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -176,10 +182,12 @@
 			files = (
 				2187D87827B1D9B9003EC98D /* SearchViewController.swift in Sources */,
 				2187D87627B1D9A7003EC98D /* BookMarkViewController.swift in Sources */,
+				21D60B9027BBDACD008018A2 /* TweetViewController.swift in Sources */,
 				2187D85F27B1D23F003EC98D /* AppDelegate.swift in Sources */,
 				2187D87E27B43E9A003EC98D /* Books.swift in Sources */,
 				2187D87427B1D97A003EC98D /* tabViewController.swift in Sources */,
 				2187D87B27B3ED5A003EC98D /* APIService.swift in Sources */,
+				21D60B8E27BA842E008018A2 /* BookDetailViewController.swift in Sources */,
 				2187D86127B1D23F003EC98D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

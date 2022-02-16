@@ -21,7 +21,7 @@ struct BookInfo: Decodable {
     var title: String
     var authors: [String]
     var publisher: String?
-    var description: String
+    var description: String?
     var imageLinks: Thumbnail?
 }
 

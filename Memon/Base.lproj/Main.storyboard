@@ -200,15 +200,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVT-eA-Guj">
                                 <rect key="frame" x="0.0" y="776" width="414" height="120"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0B-UB-UTC">
-                                        <rect key="frame" x="344" y="29" width="50" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="1Fu-h5-RFx"/>
-                                            <constraint firstAttribute="width" constant="50" id="vgh-6c-h73"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="paperplane.fill" catalog="system"/>
-                                    </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="テキストを入力してください。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="m2E-5Y-4cW">
                                         <rect key="frame" x="20" y="20" width="313" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -219,25 +210,38 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0B-UB-UTC">
+                                        <rect key="frame" x="344" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="1Fu-h5-RFx"/>
+                                            <constraint firstAttribute="width" constant="50" id="vgh-6c-h73"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="paperplane.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="tappedSendButton" destination="blh-iU-7gQ" eventType="touchUpInside" id="WM1-KN-plh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                 <constraints>
                                     <constraint firstItem="m2E-5Y-4cW" firstAttribute="leading" secondItem="mVT-eA-Guj" secondAttribute="leading" constant="20" id="72v-4B-0bL"/>
                                     <constraint firstItem="m2E-5Y-4cW" firstAttribute="top" secondItem="mVT-eA-Guj" secondAttribute="top" constant="8" id="GdM-Xh-XnF"/>
+                                    <constraint firstItem="Z0B-UB-UTC" firstAttribute="centerY" secondItem="mVT-eA-Guj" secondAttribute="centerY" constant="-20" id="ZFA-fS-cBB"/>
                                     <constraint firstAttribute="width" secondItem="mVT-eA-Guj" secondAttribute="height" multiplier="207:60" id="cjP-gL-3Vt"/>
                                     <constraint firstAttribute="trailing" secondItem="Z0B-UB-UTC" secondAttribute="trailing" constant="20" id="d4g-u9-ruO"/>
                                     <constraint firstItem="Z0B-UB-UTC" firstAttribute="leading" secondItem="m2E-5Y-4cW" secondAttribute="trailing" constant="8" id="qlH-gT-Tce"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="csU-ty-Mrj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="csU-ty-Mrj">
                                 <rect key="frame" x="0.0" y="88" width="414" height="680"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" id="Mz0-ne-lGG">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="60" id="Mz0-ne-lGG">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mz0-ne-lGG" id="6CG-Vx-2At">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -254,14 +258,19 @@
                             <constraint firstItem="csU-ty-Mrj" firstAttribute="trailing" secondItem="lf9-9V-fYQ" secondAttribute="trailing" id="Z4X-1W-fMP"/>
                             <constraint firstItem="csU-ty-Mrj" firstAttribute="top" secondItem="lf9-9V-fYQ" secondAttribute="top" id="sG4-J8-GZZ"/>
                             <constraint firstAttribute="bottom" secondItem="mVT-eA-Guj" secondAttribute="bottom" id="xUE-mB-NPC"/>
+                            <constraint firstItem="mVT-eA-Guj" firstAttribute="top" secondItem="csU-ty-Mrj" secondAttribute="bottom" constant="8" symbolic="YES" id="zxw-f9-gCe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="つぶやきメモ" id="Xxe-wn-H3S">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="6X5-wI-5VZ"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="6X5-wI-5VZ">
+                            <connections>
+                                <action selector="tappedBackButton" destination="blh-iU-7gQ" id="AuO-Nl-Lqo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="chatTextView" destination="m2E-5Y-4cW" id="X87-hY-oTU"/>
-                        <outlet property="sendButton" destination="Z0B-UB-UTC" id="ye9-xR-AYZ"/>
+                        <outlet property="sendButton" destination="Z0B-UB-UTC" id="S9c-8U-Kqy"/>
+                        <outlet property="sendChatTextView" destination="m2E-5Y-4cW" id="lI1-MJ-zQu"/>
                         <outlet property="tableView" destination="csU-ty-Mrj" id="q3l-RA-Mde"/>
                     </connections>
                 </viewController>

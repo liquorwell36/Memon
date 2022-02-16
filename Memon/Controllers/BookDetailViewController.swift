@@ -24,7 +24,6 @@ class BookDetailViewController: UIViewController {
     }
     
     private func setupUI() {
-        //bookImageView = parameters.imageLinks.smallThumbnail
         bookTitleLabel.text = parameters.title
         authorLabel.text = parameters.authors.joined(separator: ", ")
     }
@@ -45,6 +44,7 @@ class BookDetailViewController: UIViewController {
     }
     
     @IBAction func didTapToTweetButton() {
+        
         self.performSegue(withIdentifier: "toTweetViewController", sender: nil)
     }
 }

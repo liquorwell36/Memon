@@ -19,6 +19,9 @@
 		2187D87E27B43E9A003EC98D /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2187D87D27B43E9A003EC98D /* Books.swift */; };
 		21D60B8E27BA842E008018A2 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D60B8D27BA842E008018A2 /* BookDetailViewController.swift */; };
 		21D60B9027BBDACD008018A2 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D60B8F27BBDACD008018A2 /* TweetViewController.swift */; };
+		21D60B9427BD103F008018A2 /* TweetTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D60B9227BD103F008018A2 /* TweetTextTableViewCell.swift */; };
+		21D60B9527BD103F008018A2 /* TweetTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D60B9327BD103F008018A2 /* TweetTextTableViewCell.xib */; };
+		21D60B9727BD1543008018A2 /* Tweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D60B9627BD1543008018A2 /* Tweets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		2187D87D27B43E9A003EC98D /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		21D60B8D27BA842E008018A2 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		21D60B8F27BBDACD008018A2 /* TweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
+		21D60B9227BD103F008018A2 /* TweetTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTextTableViewCell.swift; sourceTree = "<group>"; };
+		21D60B9327BD103F008018A2 /* TweetTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTextTableViewCell.xib; sourceTree = "<group>"; };
+		21D60B9627BD1543008018A2 /* Tweets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 		2187D85D27B1D23F003EC98D /* Memon */ = {
 			isa = PBXGroup;
 			children = (
+				21D60B9127BD0FF8008018A2 /* Views */,
 				2187D87C27B43E01003EC98D /* Models */,
 				2187D87927B3ED47003EC98D /* Services */,
 				2187D87227B1D963003EC98D /* Controllers */,
@@ -105,8 +112,18 @@
 			isa = PBXGroup;
 			children = (
 				2187D87D27B43E9A003EC98D /* Books.swift */,
+				21D60B9627BD1543008018A2 /* Tweets.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		21D60B9127BD0FF8008018A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				21D60B9227BD103F008018A2 /* TweetTextTableViewCell.swift */,
+				21D60B9327BD103F008018A2 /* TweetTextTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D60B9527BD103F008018A2 /* TweetTextTableViewCell.xib in Resources */,
 				2187D86B27B1D241003EC98D /* LaunchScreen.storyboard in Resources */,
 				2187D86827B1D241003EC98D /* Assets.xcassets in Resources */,
 				2187D86627B1D23F003EC98D /* Main.storyboard in Resources */,
@@ -180,11 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D60B9427BD103F008018A2 /* TweetTextTableViewCell.swift in Sources */,
 				2187D87827B1D9B9003EC98D /* SearchViewController.swift in Sources */,
 				2187D87627B1D9A7003EC98D /* BookMarkViewController.swift in Sources */,
 				21D60B9027BBDACD008018A2 /* TweetViewController.swift in Sources */,
 				2187D85F27B1D23F003EC98D /* AppDelegate.swift in Sources */,
 				2187D87E27B43E9A003EC98D /* Books.swift in Sources */,
+				21D60B9727BD1543008018A2 /* Tweets.swift in Sources */,
 				2187D87427B1D97A003EC98D /* tabViewController.swift in Sources */,
 				2187D87B27B3ED5A003EC98D /* APIService.swift in Sources */,
 				21D60B8E27BA842E008018A2 /* BookDetailViewController.swift in Sources */,
